@@ -1,0 +1,52 @@
+The tool should have Constructors that allow for creation of employee objects, suppliers objects, and customer objects.
+      this.employeeID = employeeID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.department = department;
+        this.hireDate = hireDate;
+        this.terminationDate = terminationDate;                                                                                    -----Done
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Prepopulate your application with the following data; you may make changes to the data types as needed
+             const suppliers = [];                                                                             -----Done
+             const customers = [];
+             const employee = [];
+
+----------------------------------------------------------------------------------------------------------
+Have a form(s) to add roles (employees, suppliers, customers) to the application         ------Done
+
+<select id="" ()">
+  <option value="">--Select a Role--</option>
+  <option value="employee">Employee</option>
+  <option value="supplier">Supplier</option>
+  <option value="customer">Customer</option>
+</select>
+<form></form> x3
+
+------------------------------------------------------------------------------------------------------------------
+Not all forms should be displayed at one time--only the form and inputs relevant to the user's choice of almost done--
+role they would like to add
+function displayform(){
+
+}
+
+----------------------------------------------------------------------------------------------------------------------
+Create a corresponding object for the newly added data and add it to an Array                    ---Almost done
+function aEmployee(event) {
+    event.preventDefault() ;
+    const id = Number(document.getElementById('employee-id').value);
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email1').value;
+    const department = document.getElementById('department').value;
+    const hireDate = new Date(document.getElementById('hire-date').value);
+    const newEmployee = new Employee(id, firstName, lastName, email, department, hireDate, terminationDate);
+    employees.push(newEmployee);
+    document.getElementById('employee-form').reset();
+                       }
+------------------------------------------------------------------------------------------------------------------------
+
+

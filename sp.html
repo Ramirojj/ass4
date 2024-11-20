@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Company Management Tool</h1>
+<label for="role-select">Select Role:</label>
+<select id="role-select" onchange="displayForm()">
+  <option value="">--Select a Role--</option>
+  <option value="employee">Employee</option>
+  <option value="supplier">Supplier</option>
+  <option value="customer">Customer</option>
+</select>
+<!---------------------------------------------->
+<form id="employee-form"  class="role-form" style="display: none" onsubmit="aEmployee(event)">
+  <h2>Add employee</h2>
+
+  <label for="employee-id"> employee id :</label>
+  <input id="employee-id" type="number" required>
+
+  <label for="first-name">First Name:</label>
+  <input id="first-name" type="text" required>
+
+  <label for="lastName">Last Name:</label>
+  <input id="lastName" type="text" required>
+
+
+  <label for="email1">Email:</label>
+  <input id="email1" type="text" required>
+
+
+
+  <label for="department">Department:</label>
+  <input id="department" type="text" required>
+
+
+
+  <label for="hire-date">Hire Date:</label>
+  <input id="hire-date" type="date" required>
+
+
+  <label for="termination-data">Termination Date:</label>
+  <input id="termination-data" type="text" required>
+
+  <button type="submit">Add employee</button>
+
+</form>
+  <!---------------------------------------------->
+
+  <form id="supplier-form" class="role-form" style="display: none"  onsubmit="aSupplier(event)">
+    <h2>Add employee</h2>
+
+    <label for="supplier-id">Supplier id:</label>
+    <input id="supplier-id" type="text" required>
+
+    <label for="company-name">Company Name:</label>
+    <input id="company-name" type="text" required>
+
+    <label for="zipcode">Zip Code:</label>
+    <input id="zipcode" type="text" required>
+
+
+    <label for="contact-first-name">contact First Name:</label>
+    <input id="contact-first-name" type="text" required>
+
+
+
+    <label for="contact-last-name"> contact First Name:</label>
+    <input id="contact-last-name" type="text" required>
+
+
+
+    <label for="contact-email">Contact email:</label>
+    <input id="contact-email" type="text" required>
+
+
+    <label for="last-delivery">Last delivey:</label>
+    <input id="last-delivery" type="date" required>
+
+    <label for="is-active">Is active ?:</label>
+    <input id="is-active" type="checkbox" required>
+    <button type="submit" >Add Supplier</button>
+  </form>
+    <!---------------------------------------------->
+
+
+
+    <form id="customer-form"  class="role-form" style="display: none"  onsubmit="aCustomer(event)">
+      <h2>Add employee</h2>
+
+      <label for="customer-id">Customer is:</label>
+      <input id="customer-id" type="number" required>
+
+      <label for="first-name2">First Name:</label>
+      <input id="first-name2" type="text" required>
+
+      <label for="lastname3">Last Name:</label>
+      <input id="lastname3" type="text" required>
+
+
+      <label for="email2">Email:</label>
+      <input id="email2" type="text" required>
+
+
+
+      <label for="phone-number">Phone number:</label>
+      <input id="phone-number" type="text" required>
+
+
+
+      <label for="opted">optedOutOfMailingList:</label>
+      <input id="opted" type="checkbox" >
+      <label for="lastPurchase">Last Purchase:</label>
+      <input id="lastPurchase" type="date" required>
+
+      <button type="submit">Add Customer</button>
+
+    </form>
+
+<div class="view-buttons">
+  <button onclick="displayEmployees()"> Employees List</button>
+  <button onclick="displaySuppliers()"> Suppliers List</button>
+  <button onclick="displayCustomers()"> Customers List</button>
+  <button onclick="displayAll()"> All Lists </button>
+</div>
+<div id="information"></div>
+
+
+
+<script src="js/js.js"></script>
+<script src="js/js2.js"></script>
+
+</body>
+</html>
